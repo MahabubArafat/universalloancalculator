@@ -22,8 +22,20 @@ function calculateLoan(e) {
     totalPay.value = (monthly * calculatedMonth).toFixed(2);
     totalInterest.value = (monthly * calculatedMonth - principle).toFixed(2);
   } else {
-    alert("something went wrong");
+    showError("Please Check Your Numbers ");
   }
 
   e.preventDefault();
+}
+function showError(error) {
+  const errorDiv = document.createElement("div");
+  errorDiv.className = "alert alert-danger";
+  errorDiv.appendChild(document.createTextNode(error));
+  const card = document.querySelector(".card");
+  const heading = document.querySelector(".heading");
+  card.insertBefore(errorDiv, heading);
+  setTimeout(removeError, 3000);
+}
+function removeError() {
+  document.querySelector(".alert").remove();
 }
