@@ -10,6 +10,12 @@
       integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
       crossorigin="anonymous"
     />
+    <style>
+      #loading,
+      #result {
+        display: none;
+      }
+    </style>
   </head>
   <body class="bg-dark">
     <div class="container">
@@ -56,13 +62,13 @@
                 />
               </div>
             </form>
-            <!-- loadeer here-->
-            <!-- <div id="loading">
+
+            <div id="loading">
               <img src="./img/loading.gif" alt="" />
-            </div> -->
-            <!--result here-->
-            <h5 id="result" class="pt-3">Result</h5>
-            <div class="container">
+            </div>
+
+            <div id="result" class="container">
+              <h5 class="pt-3">Result</h5>
               <div class="form-group pt-3">
                 <div class="input-group">
                   <span class="input-group-text">Monthly Payment :</span>
